@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bluishWhite">#D7ECF1</color>
+    <color name="teaWhite">#F3F8F1</color>
+    <color name="blueAsh">#a1afc9</color>
+    <color name="li">#76664d</color>
+    <color name="gray">#c0c0c0</color>
+    <color name="translucent">#01000000</color>
+    <color name="app_color_description">@color/qmui_config_color_gray_5</color>
+    <color name="weather_bg">#8000</color>
+    <color name="s_black">#0F0F0F</color>
+</resources>

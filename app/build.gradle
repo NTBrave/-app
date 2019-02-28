@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "cn.NTBrave.poetr"
+        minSdkVersion 25
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+MobSDK {
+    appKey "29957d2d23b18"
+    appSecret "d3e13975f36394d319bf153cd2c3fe1c"
+    ShareSDK {
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient true
+            }
+            Evernote {
+                hostType "sandbox"
+                appKey "sharesdk-7807"
+                appSecret "d05bf86993836004"
+                shareByAppClient true
+            }
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+                bypassApproval false
+            }
+            QQ {
+                appId "1107783930"
+                appKey "2d6whKbMteDyCDiA"
+                shareByAppClient true
+                bypassApproval false
+            }
+        }
+    }
+    MobAPI {}
+    SMSSDK {}
+    MobPush {
+        devInfo {
+            HUAWEI {
+                appId "100215127"
+            }
+            MEIZU {
+                appId "112481"
+                appKey "03dd70b9be434446a7255c8586e1725a"
+            }
+            XIAOMI {
+                appId "5671772162670"
+                appKey "2882303761517721670"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.github.czy1121:loadinglayout:1.0.1'//这个依赖在value里面的style有用到，简单实用的页面多状态布局
+    implementation 'com.github.xujiaji:happy-bubble:1.1.6'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.qmuiteam:qmui:1.1.7'
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation 'org.litepal.android:java:3.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.zaaach:citypicker:2.0.2'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

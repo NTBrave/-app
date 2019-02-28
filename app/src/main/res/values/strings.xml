@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">诗词汇</string>
+    <string name="nav_item_home">首页</string>
+    <string name="nav_item_personalInformation">个性化设定</string>
+    <string name="nav_item_care">诗词比赛（未实现）</string>
+    <string name="nav_item_poetry">诗词管理</string>
+    <string name="main_tip">您还没有添加任何城市</string>
+    <string name="main_about">app信息</string>
+    <string name="webView_poetry">诗词鉴赏</string>
+    <string name="shareName">诗词汇</string>
+    <string name="addPoetry">制作诗词</string>
+</resources>
